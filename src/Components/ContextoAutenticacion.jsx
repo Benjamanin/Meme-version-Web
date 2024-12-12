@@ -17,6 +17,7 @@ export const ProveedorAutenticacion = ({ children }) => {
       setError(error);
       setEstaAutenticado(false);
       setExito(null);
+      setEstaLogueado(false);
       return false;
     }
   
@@ -33,16 +34,14 @@ export const ProveedorAutenticacion = ({ children }) => {
   const registrarUsuario = async (usuario, contraseña) => {
     const [data, error] = await registrar(usuario, contraseña);
     if (error) {
-      setError(error);
-      setExito(null); 
-      return false;
+        setError(error);
+        setExito(null); 
+        return false;
     }
-    setCredenciales(data);
-    setEstaAutenticado(true);
-    setError(null);
     setExito("¡Registro exitoso!"); 
-    return true;
-  };
+    return true; 
+};
+
 
   return (
     <ContextoAutenticacion.Provider value={{

@@ -15,13 +15,25 @@ export default function Body() {
     const [error, setError] = useState(null);
     const { credenciales, estaAutenticado } = useContext(ContextoAutenticacion);
 
+
     const obtenerYActualizarMemes = async () => {
-        const [data, error] = await obtenerMemes(1, 40);
-        if (data) {
-            setMemes(data);
-        } else {
-            setError("Error al cargar los memes.");
+        let pagina = 1;
+        const cantidad = 40;
+        let todosLosMemes = [];
+        let hayMas = true;
+    
+        while (hayMas) {
+            const [data, error] = await obtenerMemes(pagina, cantidad);
+            if (data) {
+                todosLosMemes = [...todosLosMemes, ...data];
+                hayMas = data.length === cantidad; 
+                pagina++;
+            } else {
+                hayMas = false; 
+                setError("Error al cargar los memes.");
+            }
         }
+        setMemes(todosLosMemes);
     };
 
     const filtrarMemesPorCategoria = (data, categoria) => {
@@ -90,10 +102,7 @@ export default function Body() {
     const handleLikeMeme = async (memeId, currentLikes) => {
         const token = credenciales.token;
         const [likes, error] = await likeMeme(token, memeId, currentLikes);
-        console.log("Token:", token);
-        console.log("Meme ID:", memeId);
-        console.log("Likes:", likes);
-        console.log("Error:", error);
+
         if (error) {
           alert(error);
         } else {
@@ -146,13 +155,13 @@ export default function Body() {
                 </Stack>
             </Paper>
 
-            {estaAutenticado ? (
+            {estaAutenticado && (
                 <Button
                     onClick={() => setModalOpen(true)}
                     className='botonSubir'
                     color="lime"
                 ><IconPlus size={30} /></Button>
-            ) : null}
+            )}
         </>
     );
 }

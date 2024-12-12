@@ -23,6 +23,7 @@ export default function Header() {
         setOpened(false);
         setOpened2(true);
     };
+    
     const handleLogin = async () => {
         const result = await autenticarUsuario(usuarioLogin, contraseñaLogin);
         if (!result) {
