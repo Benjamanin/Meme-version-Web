@@ -1,8 +1,24 @@
-# React + Vite
+# 🌟 Bienvenido a la versión Web de la aplicación de Memes 👋
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 ¡Comienza ya!
 
-Currently, two official plugins are available:
+### 1️⃣ Instala las dependencias:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+```
+
+### 2️⃣  Inicia la aplicación:
+
+   Puedes Iniciar la aplicación desde la terminal usando :
+   
+   ```bash
+    npm run dev
+
+   ```
+
+## 👥 ¿Quiénes somos?
+
+**Benjamin Leiva**  
+**Diego Leiva**  
+
