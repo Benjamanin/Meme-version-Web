@@ -1,0 +1,85 @@
+.BotonSesion{
+    background-color: #bfff7a;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 10%;
+    font-weight: bold;
+    transition: 0.3s;
+    display: flex;
+    right: 20px;
+    position: absolute;
+    justify-content: center;
+}
+.BotonModal{
+    background-color: #bfff7a;
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.BotonCrear{
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.papermemes{
+    width: auto;
+    transition: 0.3s;
+    background-color: #e2fffb;
+}
+.imagenes{
+    width: 800px;
+    height: 100%;
+    transition: 0.3s;
+    border: #53ae00 2px solid;
+}
+.paperimagen{
+    border: #75e300 2px solid;
+    background-color: #bfff7a;
+    
+}
+.botonSubir{
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+   z-index: 1000;
+}
+.botonMegusta{
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.postby{
+    right: 25%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.SubirMeme{
+    margin-top: 20px;
+}
+.selectpro{
+    width: 250px;
+    height: auto;
+}
+.divSelect{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: #e2fffb;
+}
+.paperHeader{
+    background-color: #e2fffb;
+}
